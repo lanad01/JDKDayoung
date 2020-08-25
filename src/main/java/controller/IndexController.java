@@ -25,7 +25,7 @@ public class IndexController {
 	@RequestMapping(value="/index/index.html")
 	public ModelAndView handleRequest(HttpServletRequest request, 
 			HttpServletResponse response,HttpSession session)throws Exception {
-		ModelAndView mav=new ModelAndView("menu_header");
+		ModelAndView mav=new ModelAndView("menu_header"); 
 		String loginUser = (String)session.getAttribute("loginUser");
 		if(loginUser !=null) { //로그인상태를 의미한다
 			session.setAttribute("loginUser", loginUser);
